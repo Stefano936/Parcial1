@@ -6,13 +6,25 @@ function Home() {
     const [showForm, setShowForm] = useState(false);
     const [searchLetter, setSearchLetter] = useState("");
     const [recipes, setRecipes] = useState([]);
+    const [filteredRecipes, setFilteredRecipes] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:3000/dishes')
             .then(response => response.json())
-            .then(data => setRecipes(data))
+            .then(data => {
+                setRecipes(data);
+                setFilteredRecipes(data);
+            })
             .catch(error => console.error('Error fetching recipes:', error));
     }, []);
+
+    useEffect(() => {
+        setFilteredRecipes(
+            recipes.filter(recipe => 
+                recipe.type.toLowerCase().includes(searchLetter.toLowerCase())
+            )
+        );
+    }, [searchLetter, recipes]);
 
     const handleAddRecipe = async (e) => {
         e.preventDefault();
@@ -51,7 +63,7 @@ function Home() {
         <>
             <div>
                 <h1 id="Titulo">Recetas</h1>
-                <button id="AgregarJuego" onClick={() => setShowForm(true)}>Agregar Receta</button>
+                <button id="AgregarReceta" onClick={() => setShowForm(true)}>Agregar Receta</button>
                 <input className="search"
                     type="text" 
                     placeholder="Buscar por receta" 
@@ -87,8 +99,8 @@ function Home() {
                     </form>
                 </div>
             )}
-            <div>
-                {recipes.map((recipe, index) => (
+            <div id="OrdenarTarjetas" >
+                {filteredRecipes.map((recipe, index) => (
                     <Tarjetas
                         key={index}
                         id={recipe.id}
