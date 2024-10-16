@@ -63,6 +63,7 @@ function Tarjetas({ id, Nombre, onUpdate = {} }) {
 
     return (
         <div id="Tarjeta">
+            <p id="Imagen">{imagen}</p>
             <h1 id="Nombre">{nombre}</h1>
             <p id="Tipo">Tipo: {tipo}</p>
             <button id="Detalles" onClick={handleDetalles}>Ver Detalles</button>
