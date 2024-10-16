@@ -1,0 +1,28 @@
+#Titulo{
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+#AgregarJuego{
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+    border-color: black;
+    border-radius: 10px;
+}
+
+div{
+    text-align:center;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.search{
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+    border-color: black;
+    border-radius: 10px;
+    text-align:center;
+}

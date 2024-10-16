@@ -1,0 +1,43 @@
+#Tarjeta{
+    background-color:rgb(170, 159, 159);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Nombre {
+    color: black;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#Detalles{
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-color: black;
+}
+
+#Borrar{
+    color: black;
+    font-size: 20px;
+    border-color: black;
+    border-radius: 10px;
+}
+
+#OrdenarTarjetas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Tipo{
+    color: black;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-color: black;
+}
