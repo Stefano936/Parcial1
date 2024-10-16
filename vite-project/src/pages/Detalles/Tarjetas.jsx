@@ -7,7 +7,7 @@ function Tarjetas({ id, Nombre, onUpdate = {} }) {
     const [descripcion, setDescripcion] = useState('');
     const [imagen, setImagen] = useState('');
     const [tipo, setTipo] = useState('');
-    const [pasos, setPasos] = useState('');
+    const [preparacion, setPreparacion] = useState('');
     const [showForm, setShowForm] = useState(false);
     const navigate = useNavigate();
 
@@ -15,11 +15,11 @@ function Tarjetas({ id, Nombre, onUpdate = {} }) {
         fetch(`http://localhost:3000/dishes/${id}`)
           .then(response => response.json())
           .then(data => {
-            setNombre(data.title || Nombre);
+            setNombre(data.name || Nombre);
             setDescripcion(data.description || '');
             setTipo(data.type || '');
             setImagen(data.image || '');
-            setPasos(data.steps || '');
+            setPreparacion(data.preparation || '');
           })
           .catch(error => {
             console.error('Error fetching data:', error);
@@ -46,11 +46,11 @@ function Tarjetas({ id, Nombre, onUpdate = {} }) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                title: nombre,
+                name: nombre,
                 description: descripcion,
                 type: tipo,
                 image: imagen,
-                steps: pasos
+                preparation: preparacion
             })
         })
         .then(response => response.json())
@@ -67,6 +67,7 @@ function Tarjetas({ id, Nombre, onUpdate = {} }) {
             <p id="Tipo">Tipo: {tipo}</p>
             <button id="Detalles" onClick={handleDetalles}>Ver Detalles</button>
             <button id="Borrar" onClick={handleBorrar}>Borrar</button>
+            <button id="Editar" onClick={() => setShowForm(!showForm)}>Editar</button>
 
             {showForm && (
                 <form onSubmit={handleGuardar}>
@@ -87,8 +88,8 @@ function Tarjetas({ id, Nombre, onUpdate = {} }) {
                         <input type="text" value={tipo} onChange={(e) => setTipo(e.target.value)} />
                     </div>
                     <div>
-                        <label>Pasos:</label>
-                        <textarea value={pasos} onChange={(e) => setPasos(e.target.value)}></textarea>
+                        <label>Preparación:</label>
+                        <textarea value={preparacion} onChange={(e) => setPreparacion(e.target.value)}></textarea>
                     </div>
                     <button type="submit">Guardar</button>
                 </form>

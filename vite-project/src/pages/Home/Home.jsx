@@ -59,6 +59,14 @@ function Home() {
         setShowForm(false);
     };
 
+    const handleUpdateRecipe = (id, updatedRecipe) => {
+        if (updatedRecipe) {
+            setRecipes(recipes.map(recipe => recipe.id === id ? updatedRecipe : recipe));
+        } else {
+            setRecipes(recipes.filter(recipe => recipe.id !== id));
+        }
+    };
+
     return (
         <>
             <div>
@@ -105,8 +113,8 @@ function Home() {
                         key={index}
                         id={recipe.id}
                         Nombre={recipe.name}
-                        onUpdate={(id) => {
-                            setRecipes(recipes.filter(recipe => recipe.id !== id));
+                        onUpdate={(id, updatedRecipe) => {
+                            handleUpdateRecipe(id, updatedRecipe);
                         }}
                     />
                 ))}
