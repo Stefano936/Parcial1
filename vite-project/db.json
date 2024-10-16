@@ -1,0 +1,84 @@
+{
+  "dishes": [
+    {
+      "id": "1",
+      "name": "Pizza Margherita",
+      "description": "Clásica pizza italiana con tomate, mozzarella y albahaca fresca.",
+      "type": "italiana",
+      "image": "🍕",
+      "preparation": "Extiende la masa, añade salsa de tomate, mozzarella y hornea."
+    },
+    {
+      "id": "2",
+      "name": "Tacos de Pollo",
+      "description": "Tacos de pollo marinado con cebolla, cilantro y salsa.",
+      "type": "mexicana",
+      "image": "🌮",
+      "preparation": "Marina el pollo, cocínalo y sírvelo en tortillas con cebolla y cilantro."
+    },
+    {
+      "id": "3",
+      "name": "Ensalada César",
+      "description": "Ensalada fresca con lechuga, pollo, crutones y aderezo César.",
+      "type": "ensalada",
+      "image": "🥗",
+      "preparation": "Mezcla lechuga con pollo cocido, crutones y aderezo."
+    },
+    {
+      "id": "4",
+      "name": "Sushi de Salmón",
+      "description": "Rollos de sushi rellenos de salmón fresco y aguacate.",
+      "type": "japonesa",
+      "image": "🍣",
+      "preparation": "Enrolla arroz, salmón y aguacate en alga nori y corta."
+    },
+    {
+      "id": "5",
+      "name": "Bowl Vegano",
+      "description": "Delicioso bowl con quinoa y verduras asadas.",
+      "type": "vegana",
+      "image": "🥙",
+      "preparation": "Cocina quinoa, asa las verduras y mezcla con salsa."
+    },
+    {
+      "id": "6",
+      "name": "Pasta Alfredo",
+      "description": "Pasta con salsa cremosa de queso parmesano y ajo.",
+      "type": "italiana",
+      "image": "🍝",
+      "preparation": "Cocina la pasta y mezcla con la salsa Alfredo."
+    },
+    {
+      "id": "7",
+      "name": "Hamburguesa Clásica",
+      "description": "Jugosa hamburguesa de res con lechuga, tomate y cebolla.",
+      "type": "americana",
+      "image": "🍔",
+      "preparation": "Forma la hamburguesa, cocínala y arma con pan y vegetales."
+    },
+    {
+      "id": "8",
+      "name": "Curry de Garbanzos",
+      "description": "Garbanzos en una rica salsa de curry y especias.",
+      "type": "india",
+      "image": "🍛",
+      "preparation": "Cocina los garbanzos con salsa de curry y sirve con arroz."
+    },
+    {
+      "name": "Falafel",
+      "description": "Bolitas de garbanzos fritas, servidas con salsa tahini.",
+      "type": "mediterránea",
+      "image": "🧆",
+      "preparation": "Forma las bolitas de garbanzos y fríelas hasta dorar.",
+      "id": "9"
+    },
+    {
+      "id": "71bb",
+      "name": "adsa",
+      "description": "dsad",
+      "type": "sdas",
+      "image": "11",
+      "preparation": "d"
+    }
+  ]
+}
